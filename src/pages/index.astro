@@ -1,0 +1,32 @@
+---
+import Links from '../components/links.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../layouts/footer.astro';
+---
+
+<Layout title="Home">
+	<main class='w-screen lg:w-full'>
+		<div class='container w-11/12 pt-40 pb-16'>
+			<div class='flex flex-col justify-center items-center gap-y-5'>
+				<img
+					src='/logo-morado.png'
+					alt='logo koala'
+					loading='lazy'
+					class='w-80 sm:w-96 lg:w-98'
+				/>
+				<span class='font-bold text-xl'>
+					Asesoría • Atención • Experiencia
+				</span>
+
+				<div class='flex flex-col items-center gap-y-4 w-full'>
+					<Links name='Catálogo' link='/catalogo' />
+					<Links name='Whatsapp' link='https://walink.co/ec6148' />
+					<Links name='Ubicación' link='https://www.google.com/maps/dir/10.1951873,-68.0130979/koala+fitness+store/@10.2066618,-68.0250259,15z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8e805de3f3f5f8cf:0x63c21d96aee4c1d2!2m2!1d-68.0141488!2d10.2196854' />
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<Footer />
+</Layout>
+

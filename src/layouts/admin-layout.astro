@@ -1,0 +1,42 @@
+---
+import {SideNav} from '@/components/dashboard/navigation/sidenav'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="google-site-verification"
+			content="GYckiFPeoWCwagRYpzl5U-iLkGUKx0oPSi_gUkeoxzE"
+		/>
+
+		<link rel="canonical" href="https://koalavzla.com/" />
+
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<meta name="robots" content="noindex, nofollow" />
+
+		<title>Koala Fitness Store - Dashboard</title>
+	</head>
+	<body>
+        <div class='flex h-screen flex-col md:flex-row md:overflow-hidden'>
+			<div class='w-full flex-none md:max-w-64'>
+				<SideNav />
+			</div>
+			<div class='flex-grow p-6 md:overflow-y-auto md:p-12'><slot /></div>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	body {
+		background-color: #f3f3f3;
+	}
+</style>

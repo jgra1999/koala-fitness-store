@@ -1,0 +1,42 @@
+---
+export const prerender = false
+
+import type {Product} from '@/types/database.ts'
+import { supabase } from '@/supabase/client';
+
+import {ItemCard} from './item-card'
+
+interface Props {
+    link: string
+    title: string
+}
+
+const {link, title} = Astro.props
+
+let products: Product[] | undefined= []
+
+const fetchProducts = async () => {
+		const { data: products, error } = await supabase
+			.from('products')
+			.select('*')
+			.eq('category', title)
+
+		if (error) console.log(error)
+		if (products) return products
+	}
+
+products = await fetchProducts()
+
+---
+
+<section
+    class='lg:container border-b-2 border-secondary px-5 md:px-10 pb-14 mt-14'
+    id={link}
+>
+    <h2 class='font-bold text-4xl mb-10'>{title}</h2>
+    <div class='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+        {products?.map((product) => (
+            <ItemCard product={product} client:visible/>
+        ))}
+    </div>
+</section>

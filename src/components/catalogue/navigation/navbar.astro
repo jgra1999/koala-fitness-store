@@ -1,0 +1,14 @@
+---
+import {SideMenu} from './side-menu'
+import {ShoppingCart} from './shopping-cart'
+---
+
+<nav class='flex justify-between items-center py-3 px-5 bg-white shadow sticky top-0 z-20'>
+    <div class='flex items-center gap-x-2'>
+        <SideMenu client:idle />
+        <img src='/logo-simple.png' alt='logo koala' class='w-32' />
+    </div>
+    <div class='text-xl font-bold'>
+        <ShoppingCart client:idle/>
+    </div>
+</nav> 

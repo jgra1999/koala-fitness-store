@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import {CheckCart} from '@/components/checkout/check-cart'
+
+import {ArrowLeftIcon} from '@heroicons/react/24/outline'
+---
+
+<Layout title='Checkout'>
+    <main>
+        <header>
+            <nav class='flex justify-between items-center py-3 px-5 bg-white shadow sticky top-0'>
+                <a href='/catalogo'>
+                    <ArrowLeftIcon className='w-6 h-6 stroke-2 active:stroke-primary lg:hover:stroke-primary' />
+                </a>
+                <img src='/logo-simple.png' alt='logo koala' class='w-32' />
+            </nav>
+        </header>
+
+        <CheckCart client:visible />
+    </main>
+</Layout>
