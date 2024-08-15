@@ -1,15 +1,15 @@
 ---
 interface Props {
-	name: string;
-    link: string
+	name: string
+	link: string
 }
 
-const { name, link} = Astro.props;
+const { name, link } = Astro.props
 ---
 
 <a
-    href={link}
-    class='w-full sm:w-2/4 lg:w-1/3 max-w-[430px] sm:max-w-none py-2 bg-primary active:bg-orange-400 lg:hover:bg-orange-400 text-white font-bold text-xl rounded text-center'
+	href={link}
+	class='w-full sm:w-2/4 lg:w-1/3 max-w-[430px] sm:max-w-none py-2 bg-primary active:bg-zinc-300 lg:hover:bg-zinc-300 text-white font-bold text-xl rounded text-center transition-colors duration-150'
 >
-    {name}
+	{name}
 </a>
