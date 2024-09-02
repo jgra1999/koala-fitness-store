@@ -9,8 +9,22 @@ export default {
 			colors: {
 				primary: '#F57C00',
 				secondary: '#6c02be'
+			},
+			keyframes: {
+				moveLeft: {
+					from: {
+						transform: 'translateX(100%)'
+					},
+					to: {
+						transform: 'translateX(-100%)'
+					}
+				}
+			},
+
+			animation: {
+				moveLeft: 'moveLeft 100s linear infinite'
 			}
-		}
-	},
-	plugins: []
+		},
+		plugins: []
+	}
 }
