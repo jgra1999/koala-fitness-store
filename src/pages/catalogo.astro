@@ -14,6 +14,7 @@ import {
 	PhoneIcon
 } from '@heroicons/react/24/outline'
 import { WhatsAppIcon, InstagramIcon } from '@/components/icons/icons'
+import { PromoBand } from '@/components/catalogue/PromoBand'
 
 /* let categories: Item[] | undefined = []
 
@@ -61,12 +62,7 @@ categories = await fetchCategories() */
 		<header>
 			<Navbar />
 			<Carrousel client:visible />
-			<!-- <div class='bg-[#4c0a19] px-4 py-2 w-full text-white font-bold capitalize'>
-				<span>Mano tengo Fe</span>
-				<span>Mano tengo Fe</span>
-				<span>Mano tengo Fe</span>
-				<span>Mano tengo Fe</span>
-			</div> -->
+			<PromoBand />
 		</header>
 
 		<!-- {categories?.map((category) => (
