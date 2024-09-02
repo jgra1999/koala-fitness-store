@@ -1,12 +1,19 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro'
 // import { supabase } from '@/supabase/client';
 // import type { Item } from '@/types/database';
 
 /* components */
-import {Carrousel} from '@/components/catalogue/carrousel'
+import { Carrousel } from '@/components/catalogue/carrousel'
 import Navbar from '@/components/catalogue/navigation/navbar.astro'
-import {CataloguePage} from '@/components/catalogue/products/catalogue-page'
+import { CataloguePage } from '@/components/catalogue/products/catalogue-page'
+import {
+	DevicePhoneMobileIcon,
+	EnvelopeIcon,
+	MapPinIcon,
+	PhoneIcon
+} from '@heroicons/react/24/outline'
+import { WhatsAppIcon, InstagramIcon } from '@/components/icons/icons'
 
 /* let categories: Item[] | undefined = []
 
@@ -21,24 +28,110 @@ categories = await fetchCategories() */
 ---
 
 <Layout title='Catalogo'>
-    <main>
-        <header>
-            <Carrousel client:visible />
-        </header>
-        <Navbar />
+	<div class='bg-[#EEEEEE] w-full px-7 py-2 hidden md:flex justify-between'>
+		<!-- informacion -->
+		<div
+			class='flex flex-col sm:flex-row text-sm text-[#5B5B5B] font-bold items-center'
+		>
+			<div class='flex items-center gap-x-1'>
+				<MapPinIcon className='stroke-primary w-4 h-4' />
+				<p>C.C. Bienestar, Piso 1, La Viña, Valencia</p>
+			</div>
+			<div class='bg-primary px-[1px] h-6 mx-2'></div>
+			<div class='flex items-center gap-x-1'>
+				<DevicePhoneMobileIcon className='stroke-primary w-4 h-4' />
+				<p>0424-4354773</p>
+			</div>
+		</div>
 
-        <!-- {categories?.map((category) => (
+		<!-- RRSS -->
+		<div class='space-x-2'>
+			<a href='https://www.instagram.com/koalavzla/'>
+				<WhatsAppIcon styles='stroke-primary w-5 h-5' />
+			</a>
+			<a href='https://www.instagram.com/koalavzla/'>
+				<InstagramIcon styles='fill-primary w-5 h-5' />
+			</a>
+			<a href='https://www.instagram.com/koalavzla/'>
+				<EnvelopeIcon className='inline-block stroke-primary w-5 h-5' />
+			</a>
+		</div>
+	</div>
+	<main>
+		<header>
+			<Navbar />
+			<Carrousel client:visible />
+			<!-- <div class='bg-[#4c0a19] px-4 py-2 w-full text-white font-bold capitalize'>
+				<span>Mano tengo Fe</span>
+				<span>Mano tengo Fe</span>
+				<span>Mano tengo Fe</span>
+				<span>Mano tengo Fe</span>
+			</div> -->
+		</header>
+
+		<!-- {categories?.map((category) => (
             <ProductSection
                 title={category.name}
                 link={category.link}
             />
         ))} -->
-        <CataloguePage client:load />
-    </main>
+		<CataloguePage client:load />
+	</main>
 </Layout>
 
 <style is:inline>
-    .swiper-pagination-bullet-active {
-	background-color: white !important ;
-}
+	.swiper-pagination-bullet-active {
+		background-color: white !important ;
+	}
+
+	#categories__carrousel .swiper-wrapper {
+		/* padding-left: -100px; */
+		padding-bottom: 15px;
+	}
+	#categories__carrousel .swiper-slide {
+		/* width: auto !important; */
+		/* min-width: 100px !important; */
+		/* margin-left: 40px; */
+	}
+
+	.swiper-button-next {
+		right: 10px !important;
+		left: left !important;
+		top: 15px !important;
+	}
+	.swiper-button-next::after {
+		color: #3a3a3a;
+		font-size: 20px !important;
+		font-weight: 800;
+	}
+
+	.swiper-button-prev {
+		right: 30px !important;
+		top: 15px !important;
+		left: auto;
+	}
+
+	.swiper-button-prev::after {
+		color: #3a3a3a;
+		font-size: 20px !important;
+		font-weight: 800;
+	}
+
+	.swiper-button-disabled::after {
+		color: #000;
+	}
+
+	/* Next and Prev Buttons Responsive */
+
+	@media (width <= 640px) {
+		.swiper-button-next {
+			right: -5px !important;
+			top: 12px !important;
+		}
+
+		.swiper-button-prev {
+			right: 10px !important;
+			top: 12px !important;
+		}
+	}
 </style>

@@ -1,14 +1,20 @@
 ---
-import {SideMenu} from './side-menu'
-import {ShoppingCart} from './shopping-cart'
+import { SideMenu } from './side-menu'
+import { ShoppingCart } from './shopping-cart'
+import { CategoriesNavigation } from './CategoriesNavigation'
 ---
 
-<nav class='flex justify-between items-center py-3 px-5 bg-white shadow sticky top-0 z-20'>
-    <div class='flex items-center gap-x-2'>
-        <SideMenu client:idle />
-        <img src='/logo-simple.png' alt='logo koala' class='w-32' />
-    </div>
-    <div class='text-xl font-bold'>
-        <ShoppingCart client:idle/>
-    </div>
-</nav> 
+<nav class='pt-5 px-4 bg-white shadow sticky top-0 z-20'>
+	<div class='flex justify-between items-center mb-10 md:mb-8'>
+		<div class='flex items-center gap-x-2'>
+			<!-- <SideMenu client:idle /> -->
+			<img src='/orange-logo-simple.png' alt='logo koala' class='w-40' />
+		</div>
+		<div class='text-xl font-bold'>
+			<ShoppingCart client:idle />
+		</div>
+	</div>
+	<div>
+		<CategoriesNavigation client:visible />
+	</div>
+</nav>
