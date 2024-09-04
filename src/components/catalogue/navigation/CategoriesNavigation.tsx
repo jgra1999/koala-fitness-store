@@ -42,9 +42,20 @@ export function CategoriesNavigation() {
 		>
 			{categories.map((category) => (
 				<SwiperSlide key={category.id}>
-					<p className='text-xs md:text-base font-semibold text-primary md:text-center max-w-20 md:max-w-none'>
+					<a
+						href={`#${category.link}`}
+						className='text-xs
+						block
+				  md:text-base
+				  font-semibold
+				  text-primary
+				  hover:text-zinc-800
+				  active:text-zinc-800
+					max-w-20
+				  md:max-w-none'
+					>
 						{category.name}
-					</p>
+					</a>
 				</SwiperSlide>
 			))}
 		</Swiper>
