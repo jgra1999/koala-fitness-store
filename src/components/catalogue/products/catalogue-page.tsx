@@ -10,7 +10,6 @@ export function CataloguePage() {
 
 		if (error) console.log(error)
 		if (categories) setCategories(categories)
-		console.log('🚀 ~ fetchCategories ~ categories:', categories)
 	}
 
 	useEffect(() => {
