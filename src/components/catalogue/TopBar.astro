@@ -1,0 +1,40 @@
+---
+import {
+	DevicePhoneMobileIcon,
+	EnvelopeIcon,
+	MapPinIcon
+} from '@heroicons/react/24/outline'
+import { InstagramIcon, WhatsAppIcon } from '../icons/icons'
+---
+
+<div class='bg-[#EEEEEE] w-full px-7 py-2 hidden md:flex justify-between'>
+	<!-- informacion -->
+	<div
+		class='flex flex-col sm:flex-row text-sm text-[#5B5B5B] font-bold items-center'
+	>
+		<div class='flex items-center gap-x-1'>
+			<MapPinIcon className='stroke-primary w-4 h-4' />
+			<p>C.C. Bienestar, Piso 1, La Viña, Valencia</p>
+		</div>
+		<div class='bg-primary px-[1px] h-6 mx-2'></div>
+		<div class='flex items-center gap-x-1'>
+			<DevicePhoneMobileIcon className='stroke-primary w-4 h-4' />
+			<p>0424-4354773</p>
+		</div>
+	</div>
+
+	<!-- RRSS -->
+	<div class='space-x-2'>
+		<a href='https://walink.co/ec6148'>
+			<WhatsAppIcon styles='stroke-primary w-5 h-5' />
+		</a>
+		<a href='https://www.instagram.com/koalavzla/'>
+			<InstagramIcon styles='fill-primary w-5 h-5' />
+		</a>
+		<a
+			href='mailto:koala.storevzla@gmail.com?subject=Hola%20quisiera%20consultar%20el%20catalogo%20de%20productos'
+		>
+			<EnvelopeIcon className='inline-block stroke-primary w-5 h-5' />
+		</a>
+	</div>
+</div>

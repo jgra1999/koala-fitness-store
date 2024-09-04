@@ -6,15 +6,8 @@ import Layout from '@/layouts/Layout.astro'
 /* components */
 import { Carrousel } from '@/components/catalogue/carrousel'
 import Navbar from '@/components/catalogue/navigation/navbar.astro'
-import { CataloguePage } from '@/components/catalogue/products/catalogue-page'
-import {
-	DevicePhoneMobileIcon,
-	EnvelopeIcon,
-	MapPinIcon,
-	PhoneIcon
-} from '@heroicons/react/24/outline'
-import { WhatsAppIcon, InstagramIcon } from '@/components/icons/icons'
 import { PromoBand } from '@/components/catalogue/PromoBand'
+import TopBar from '@/components/catalogue/TopBar.astro'
 
 /* let categories: Item[] | undefined = []
 
@@ -29,48 +22,14 @@ categories = await fetchCategories() */
 ---
 
 <Layout title='Catalogo'>
-	<div class='bg-[#EEEEEE] w-full px-7 py-2 hidden md:flex justify-between'>
-		<!-- informacion -->
-		<div
-			class='flex flex-col sm:flex-row text-sm text-[#5B5B5B] font-bold items-center'
-		>
-			<div class='flex items-center gap-x-1'>
-				<MapPinIcon className='stroke-primary w-4 h-4' />
-				<p>C.C. Bienestar, Piso 1, La Viña, Valencia</p>
-			</div>
-			<div class='bg-primary px-[1px] h-6 mx-2'></div>
-			<div class='flex items-center gap-x-1'>
-				<DevicePhoneMobileIcon className='stroke-primary w-4 h-4' />
-				<p>0424-4354773</p>
-			</div>
-		</div>
-
-		<!-- RRSS -->
-		<div class='space-x-2'>
-			<a href='https://www.instagram.com/koalavzla/'>
-				<WhatsAppIcon styles='stroke-primary w-5 h-5' />
-			</a>
-			<a href='https://www.instagram.com/koalavzla/'>
-				<InstagramIcon styles='fill-primary w-5 h-5' />
-			</a>
-			<a href='https://www.instagram.com/koalavzla/'>
-				<EnvelopeIcon className='inline-block stroke-primary w-5 h-5' />
-			</a>
-		</div>
-	</div>
+	<TopBar />
 	<main>
+		<Navbar />
 		<header>
 			<Carrousel client:visible />
 			<PromoBand />
 		</header>
-
-		<!-- {categories?.map((category) => (
-            <ProductSection
-                title={category.name}
-                link={category.link}
-            />
-        ))} -->
-		<CataloguePage client:load />
+		<!-- <CataloguePage client:load /> -->
 	</main>
 </Layout>
 
