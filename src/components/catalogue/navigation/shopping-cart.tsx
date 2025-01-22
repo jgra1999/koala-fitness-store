@@ -16,7 +16,7 @@ export function ShoppingCart() {
 				className='flex  items-center pr-2 gap-x-2 text-bold'
 				onClick={() => setOpen(true)}
 			>
-				<span className='text-secondary'>{cart.length}</span>
+				<span className='text-primary'>{cart.length}</span>
 				<ShoppingBagIcon className='w-6 h-6 stroke-2' />
 			</button>
 

@@ -30,7 +30,7 @@ export function Carrousel() {
 		<Swiper
 			slidesPerView={1}
 			autoplay={{
-				delay: 3000,
+				delay: 5000,
 				disableOnInteraction: false
 			}}
 			pagination={{
@@ -44,7 +44,7 @@ export function Carrousel() {
 					<img
 						src={banner.banner_url}
 						alt='Carrousel image'
-						className='w-full'
+						className='w-full h-[728px] aspect-[1519x728]'
 						loading='lazy'
 					/>
 				</SwiperSlide>

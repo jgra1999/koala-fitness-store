@@ -29,7 +29,7 @@ export function CatalogueSection({ title, link }: Props) {
 	}, [isAscending])
 	return (
 		<section
-			className='lg:container border-b-2 border-secondary px-5 md:px-10 pb-14 mt-14'
+			className='lg:container border-b-2 border-secondary px-2 md:px-10 pb-14 mt-14'
 			id={link}
 		>
 			<div className='w-full flex justify-between'>
@@ -55,7 +55,7 @@ export function CatalogueSection({ title, link }: Props) {
 					</button>
 				</div>
 			</div>
-			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
 				{products.map((product) => (
 					<ItemCard key={product.id} product={product} />
 				))}

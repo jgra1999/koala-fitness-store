@@ -34,13 +34,13 @@ export function ItemCard({ product }: Props) {
 					<img
 						className='p-8 rounded-t-lg w-64 aspect-[350/550]'
 						src={product.image_url_1}
-						alt='product image'
+						alt={`IMAGEN DE ${product.name}`}
 						loading='lazy'
 					/>
 				</div>
-				<div className='px-5 pb-5 space-y-4 w-full'>
+				<div className='px-3 md:px-5 pb-5 space-y-4 w-full'>
 					<div className='text-start'>
-						<h5 className='text-sm sm:text-base font-bold text-zinc-600 group-hover:text-primary'>
+						<h5 className='text-xs sm:text-base font-bold text-zinc-600 group-hover:text-primary'>
 							{product.name}
 						</h5>
 						<span className='text-gray-400 font-medium capitalize text-xs'>
@@ -140,6 +140,9 @@ export function ItemCard({ product }: Props) {
 													className='w-28 md:w-[100px]'
 												/>
 											</button>
+										</div>
+										<div className='text-xs text-gray-400 w-full text-left mt-2'>
+											NOTA: Esta es solo una imagen de referencia
 										</div>
 									</div>
 									<div className='flex flex-col gap-y-4 items-start mt-4'>

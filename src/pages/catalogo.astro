@@ -1,24 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-// import { supabase } from '@/supabase/client';
-// import type { Item } from '@/types/database';
 
 /* components */
 import { Carrousel } from '@/components/catalogue/carrousel'
 import Navbar from '@/components/catalogue/navigation/navbar.astro'
 import { PromoBand } from '@/components/catalogue/PromoBand'
 import TopBar from '@/components/catalogue/TopBar.astro'
-
-/* let categories: Item[] | undefined = []
-
-const fetchCategories = async () => {
-		const { data: categories, error } = await supabase.from('categories').select('*')
-
-		if (error) console.log(error)
-		if (categories) return categories
-	}
-
-categories = await fetchCategories() */
+import { CataloguePage } from '@/components/catalogue/products/catalogue-page'
 ---
 
 <Layout title='Catalogo'>
@@ -26,10 +14,10 @@ categories = await fetchCategories() */
 	<main>
 		<Navbar />
 		<header>
-			<Carrousel client:visible />
+			<Carrousel client:load />
 			<PromoBand />
 		</header>
-		<!-- <CataloguePage client:load /> -->
+		<CataloguePage client:load />
 	</main>
 </Layout>
 
