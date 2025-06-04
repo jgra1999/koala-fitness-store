@@ -35,7 +35,7 @@ export function PromoBand() {
 						key={index}
 						className='inline-block font-bold capitalize text-primary'
 					>
-						Nuestros precios incluyen descuentos 🔥
+						PRECIOS OFERTA ESPECIAL 🔥
 					</span>
 				))}
 			</div>
