@@ -43,8 +43,8 @@ export function Carrousel() {
 				<SwiperSlide key={banner.id}>
 					<img
 						src={banner.banner_url}
-						alt='Carrousel image'
-						className='w-full h-[728px] aspect-[1519x728]'
+						alt='Banner Productos'
+						className='w-full aspect-[1519x728]'
 						loading='lazy'
 					/>
 				</SwiperSlide>

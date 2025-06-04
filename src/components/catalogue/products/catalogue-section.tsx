@@ -32,8 +32,8 @@ export function CatalogueSection({ title, link }: Props) {
 			className='lg:container border-b-2 border-secondary px-2 md:px-10 pb-14 mt-14'
 			id={link}
 		>
-			<div className='w-full flex justify-between'>
-				<h2 className='font-bold text-4xl mb-10'>{title}</h2>
+			<div className='w-full flex-col md:flex-row justify-between mb-10 space-y-4'>
+				<h2 className='font-bold text-4xl'>{title}</h2>
 				<div className='flex gap-x-5'>
 					<button
 						className={`flex items-center text-sm ${
